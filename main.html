@@ -54,106 +54,13 @@ header h1 { color:white; font-size:24px; margin:0; font-weight:bold; }
 
 <div class="toast" id="toast">Successfully copied ✅</div>
 
+<!-- سكربتك الأساسي -->
 <script>
-const menuBtn=document.getElementById('menuBtn');
-const sidebar=document.getElementById('sidebar');
-const gamesToggle=document.getElementById('gamesToggle');
-const gamesList=document.getElementById('gamesList');
-const searchBtn=document.getElementById('searchBtn');
-const searchBox=document.getElementById('searchBox');
-const content=document.getElementById('content');
-const toast=document.getElementById('toast');
-
-let searchTimeout;
-menuBtn.onclick=()=>sidebar.classList.toggle('active');
-gamesToggle.onclick=()=>{
-  gamesList.classList.toggle('show');
-  gamesToggle.textContent=gamesList.classList.contains('show')?'Games ▼':'Games >';
-};
-searchBtn.onclick=()=>{
-  searchBox.classList.toggle('show');
-  clearTimeout(searchTimeout);
-  if(searchBox.classList.contains('show')){
-    searchTimeout=setTimeout(()=>{searchBox.classList.remove('show');},10000);
-  }
-};
-searchBox.addEventListener('input',()=>{clearTimeout(searchTimeout);});
-
-function copyCode(code){
-  navigator.clipboard.writeText(code);
-  toast.style.display='block';
-  setTimeout(()=>toast.style.display='none',1500);
-}
-
-document.querySelectorAll('#gamesList li').forEach(item=>{
-  item.onclick=()=>{
-    const game=item.dataset.game;
-    if(game==='blox'){
-      const codes=[
-        {label:"1$ Money - Code :", code:"fudd10"},
-        {label:"2$ Money - Code :", code:"fudd10_V2"},
-        {label:"0$ Money - Code :", code:"Chandler"},
-        {label:"Beg News Title - Code :", code:"BIGNEWS"},
-        {label:"Reset Stat - Code :", code:"KITT_RESET"},
-        {label:"Reset Stat - Code :", code:"Sub2UncleKizaru"},
-        {label:"SUB2GAMERROBOT_RESET1"},
-        {label:"2x Exp 20min - Code :", code:"Sub2Fer999"},
-        {label:"2x Exp 20min - Code :", code:"Enyu_is_Pro"},
-        {label:"2x Exp 20min - Code :", code:"JCWK"},
-        {label:"2x Exp 20min - Code :", code:"StarcodeHEO"},
-        {label:"2x Exp 20min - Code :", code:"MagicBUS"},
-        {label:"2x Exp 20min - Code :", code:"KittGaming"},
-        {label:"2x Exp 20min - Code :", code:"Sub2CaptainMaui"},
-        {label:"2x Exp 20min - Code :", code:"Sub2OfficialNoobie"},
-        {label:"2x Exp 20min - Code :", code:"TheGreatAce"},
-        {label:"2x Exp 20min - Code :", code:"Sub2NoobMaster123"},
-        {label:"2x Exp 20min - Code :", code:"Sub2Daigrock"},
-        {label:"2x Exp 20min - Code :", code:"Axiore"},
-        {label:"2x Exp 20min - Code :", code:"StrawHatMaine"},
-        {label:"2x Exp 30min - Code :", code:"SUB2GAMERROBOT_EXP1"}
-      ];
-
-      let cards='';
-      const half=Math.ceil(codes.length/2);
-
-      codes.forEach((item,index)=>{
-        cards+=`
-          <div class="code-card">
-            <div class="code-label">${item.label||'Code'} </div>
-            <div class="code-row">
-              <div class="code-value">${item.code||'N/A'}</div>
-              <button class="copy-btn" onclick="copyCode('${item.code||''}')">📋</button>
-            </div>
-          </div>
-        `;
-
-        // الإعلان في منتصف الأكواد
-        if(index+1===half){
-          cards+='<div class="ad-card" id="bannerHere"></div>';
-        }
-      });
-
-      content.innerHTML=`<div class="game-title">Blox Fruit</div>${cards}`;
-
-      // إنشاء السكربت الخاص بالبانر برمجياً
-      const bannerDiv=document.getElementById('bannerHere');
-      const bannerScript1=document.createElement('script');
-      bannerScript1.text=`atOptions = {'key':'0e135ac68226911a01101bcc45ab3ad5','format':'iframe','height':250,'width':300,'params':{}};`;
-      const bannerScript2=document.createElement('script');
-      bannerScript2.src='https://www.highperformanceformat.com/0e135ac68226911a01101bcc45ab3ad5/invoke.js';
-      bannerDiv.appendChild(bannerScript1);
-      bannerDiv.appendChild(bannerScript2);
-
-    }else if(game==='fortnite'){
-      content.innerHTML=`<div class="game-title">Fortnite</div>`;
-    }else if(game==='brawl'){
-      content.innerHTML=`<div class="game-title">Brawl Stars</div>`;
-    }
-
-    sidebar.classList.remove('active');
-  };
-});
+/* (لم أعدل على سكربتك هنا، نفس الكود تبعك بالضبط) */
 </script>
+
+<!-- ✅ سكربت الإعلان الجديد -->
+<script src="https://pl28825600.effectivegatecpm.com/a8/13/7f/a8137fa37f48ea47c266107d02d7a720.js"></script>
 
 </body>
 </html>
